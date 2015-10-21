@@ -8,14 +8,16 @@
 /// <reference path="main/main.controller.ts" />
 /// <reference path="../app/components/navbar/navbar.directive.ts" />
 /// <reference path="../app/components/post/post.directive.ts" />
+/// <reference path="../app/components/post/post.create.directive.ts" />
 /// <reference path="../app/components/post/post.service.ts" />
+/// <reference path="../app/components/user/user.service.ts" />
 
 declare var moment: moment.MomentStatic;
 
 module simplysocial {
   'use strict';
 
-  angular.module('simplysocial', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router'])
+  angular.module('simplysocial', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ngDialog'])
     .constant('moment', moment)
     .config(Config)
 
@@ -24,6 +26,8 @@ module simplysocial {
     .run(RunBlock)
     .controller('MainController', MainController)
 	.service('postService', PostService)
+    .service('userService', UserService)
     .directive('navbar', navbar)
-    .directive('post', post);
+    .directive('post', post)
+    .directive('postCreate', postCreate);
 }

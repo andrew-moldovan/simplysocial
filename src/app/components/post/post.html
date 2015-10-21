@@ -1,3 +1,4 @@
-{{post.data.displayName}}
-<div ng-bind-html="post.data.message"></div>
-<br>
+<div class="post">
+	{{post.data.displayName}} | {{post.data.relativeTime}}
+	<div ng-bind-html="post.data.message"></div>
+</div>

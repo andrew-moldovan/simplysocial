@@ -17,8 +17,13 @@ module simplysocial {
 
   /** @ngInject */
   class NavbarController {
-    constructor() {
-      
+    
+    constructor(private ngDialog) {
+
+    }
+
+    public openCreateNewMessage() {
+      this.ngDialog.open({ template: 'app/components/popup/popup.html' });
     }
   }
 }

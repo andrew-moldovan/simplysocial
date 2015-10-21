@@ -3,31 +3,32 @@ module simplysocial {
 
   export class PostService {
     private posts: any[] = [];
-    private $log: ng.ILogService;
     
     /** @ngInject */
-    constructor($log: ng.ILogService) {
-      this.$log = $log;
+    constructor(private $log: ng.ILogService, private userService: UserService) {
       this.posts = [
         { displayName: "Sam Soffes", 
-          timestamp: "3m", 
-          message: "How To Get Inspired: the Right Way - Designmodo bit.ly/1lE4uJc Good stuff from @designmodo!",
-          links: [{start: 48, end: 65}],
-          atMentions: [{start: 79, end: 91}],
-          hashtags: []
+          timestamp: 1445441030000,
+          message: "How To Get Inspired: the Right Way - Designmodo <a href='http://bit.ly/1lE4uJc'>bit.ly/1lE4uJc</a> Good stuff from <span class='at-mention'>@designmodo!</span>"
         },
         { displayName: "Meg Robichaud", 
-          timestamp: "25m", 
+          timestamp: 1444771738424, 
           message: "My view this morning is simply beautiful",
-          links: [{ start: 0, end: 3 }, { start: 6, end: 9 }],
-          atMentions: [],
-          hashtags: []
         }
       ];
     }
 
     getPosts() {
       return this.posts;
+    }
+
+    createPost(message: string) {
+      var newPost = {
+        displayName: this.userService.getLoggedInUser().displayName,
+        timestamp: Date.now(),
+        message: message
+      }
+      this.posts.unshift(newPost);
     }
   }
 }
