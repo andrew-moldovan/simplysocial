@@ -7,7 +7,8 @@
 /// <reference path="index.run.ts" />
 /// <reference path="main/main.controller.ts" />
 /// <reference path="../app/components/navbar/navbar.directive.ts" />
-/// <reference path="../app/components/tile/tile.directive.ts" />
+/// <reference path="../app/components/post/post.directive.ts" />
+/// <reference path="../app/components/post/post.service.ts" />
 
 declare var moment: moment.MomentStatic;
 
@@ -22,6 +23,7 @@ module simplysocial {
 
     .run(RunBlock)
     .controller('MainController', MainController)
+	.service('postService', PostService)
     .directive('navbar', navbar)
-    .directive('tile', tile);
+    .directive('post', post);
 }
