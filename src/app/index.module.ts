@@ -11,6 +11,7 @@
 /// <reference path="../app/components/post/post.create.directive.ts" />
 /// <reference path="../app/components/post/post.service.ts" />
 /// <reference path="../app/components/user/user.service.ts" />
+/// <reference path="../app/components/popup/popup.controller.ts" />
 
 declare var moment: moment.MomentStatic;
 
@@ -25,9 +26,11 @@ module simplysocial {
 
     .run(RunBlock)
     .controller('MainController', MainController)
+    .controller('popUpController', PopUpController)
 	.service('postService', PostService)
     .service('userService', UserService)
     .directive('navbar', navbar)
     .directive('post', post)
-    .directive('postCreate', postCreate);
+    .directive('postCreate', postCreate)
+    .filter('filterPosts', filterPosts);
 }

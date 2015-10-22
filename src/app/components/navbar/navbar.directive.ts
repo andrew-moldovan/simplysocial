@@ -23,7 +23,11 @@ module simplysocial {
     }
 
     public openCreateNewMessage() {
-      this.ngDialog.open({ template: 'app/components/popup/popup.html' });
+      this.ngDialog.open({ 
+        template: 'app/components/popup/popup.html',
+        controller: PopUpController,
+        controllerAs: 'pu'
+      });
     }
   }
 }
