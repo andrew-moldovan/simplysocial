@@ -6,6 +6,7 @@
 /// <reference path="index.config.ts" />
 /// <reference path="index.run.ts" />
 /// <reference path="main/main.controller.ts" />
+/// <reference path="../app/components/settings/settings.controller.ts" />
 /// <reference path="../app/components/navbar/navbar.directive.ts" />
 /// <reference path="../app/components/post/post.directive.ts" />
 /// <reference path="../app/components/post/post.create.directive.ts" />
@@ -26,7 +27,8 @@ module simplysocial {
 
     .run(RunBlock)
     .controller('MainController', MainController)
-    .controller('popUpController', PopUpController)
+    .controller('PopUpController', PopUpController)
+    .controller('SettingsController', SettingsController)
 	.service('postService', PostService)
     .service('userService', UserService)
     .directive('navbar', navbar)

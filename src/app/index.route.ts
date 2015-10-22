@@ -10,6 +10,12 @@ module simplysocial {
           templateUrl: 'app/main/main.html',
           controller: 'MainController',
           controllerAs: 'main'
+        })
+        .state('settings', {
+          url: '/settings',
+          templateUrl: 'app/components/settings/settings.html',
+          controller: 'SettingsController',
+          controllerAs: 'settings'
         });
 
       $urlRouterProvider.otherwise('/');
