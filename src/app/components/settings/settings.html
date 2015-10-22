@@ -4,6 +4,32 @@
     <navbar/>
   </div>
 
-  Settings
+  <h1>Settings</h1>
+
+  <div class="account">
+    <h3>Account</h3>
+    <input type="text" ng-model="settings.user.displayName">
+    <input type="email" ng-model="settings.user.email">
+    <input type="password" ng-model="settings.user.password">
+  </div>
+  
+  <div class="notifications">
+    <div class="notification-setting" ng-repeat="notification in settings.user.notificationSettings">
+      <input type="checkbox" ng-model="notification.value">{{notification.text}}
+    </div>
+  </div>
+
+  <div class="privacy">
+
+    <div class="privacy-grouping" ng-repeat="privacyGroup in settings.user.privacySettings">
+      <h6>{{privacyGroup.grouping}}</h6>
+      <div class="privacy-grouping-item" ng-repeat="item in privacyGroup.values">
+        <input type="radio" name="{{privacyGroup.grouping}}" ng-model="privacyGroup.selected" value="{{item.value}}">{{item.text}}
+      </div>
+    </div>
+
+  </div>
+
+  <button ng-click="settings.saveSettings()">Save Settings</button>
 
 </div>
