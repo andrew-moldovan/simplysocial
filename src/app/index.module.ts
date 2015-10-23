@@ -31,7 +31,7 @@ module simplysocial {
     .controller('SettingsController', SettingsController)
 	.service('postService', PostService)
     .service('userService', UserService)
-    .directive('navbar', navbar)
+    .directive('simplySocialNavbar', simplySocialNavbar)
     .directive('post', post)
     .directive('postCreate', postCreate)
     .filter('filterPosts', filterPosts);

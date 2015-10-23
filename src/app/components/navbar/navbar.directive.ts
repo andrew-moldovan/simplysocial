@@ -2,7 +2,7 @@ module simplysocial {
   'use strict';
 
   /** @ngInject */
-  export function navbar(): ng.IDirective {
+  export function simplySocialNavbar(): ng.IDirective {
 
     return {
       restrict: 'E',
@@ -17,6 +17,7 @@ module simplysocial {
 
   /** @ngInject */
   class NavbarController {
+    public showDropdown: boolean = false;
     
     constructor(private ngDialog) {
 

@@ -1,16 +1,28 @@
-<nav class="navbar navbar-static-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" ui-sref="home">
-        simplysocial
-      </a>
-    </div>
+<div class="navbar">
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <button ng-click="vm.openCreateNewMessage()"> Create</button>
-        <a ui-sref="settings">Settings</a>
-      </ul>
-    </div>
+  <div class="header">
+    <a class="title" ui-sref="home">
+      <img src="assets/images/speachBubble_coloured.png" class="logo-pic">
+      <span class="title-text">
+        <span class="dark">simply</span><span class="light">social</span>
+    </a>
   </div>
-</nav>
+
+  <div class="right-side">
+    <img src="assets/images/addSpeachBubble_coloured.png" class="popover-button" ng-click="vm.openCreateNewMessage()">
+    <!-- <button ng-click="vm.openCreateNewMessage()" class="popover-button"> Create</button> -->
+    
+    <input type="text" class="search-input" />
+    <img src="assets/images/profile_pic.png" class="profile-pic" ng-mouseenter="vm.showDropdown = true">
+    <div class="dropdown" ng-if="vm.showDropdown">
+      <ul>
+        <li><a ui-sref="profile">Profile</a></li>
+        <li><a ui-sref="followers">Followers</a></li>
+        <li><a ui-sref="following">Following</a></li>
+        <li><a ui-sref="settings">Settings</a></li>
+      </ul>
+      
+    </div>
+    
+  </div>
+</div>

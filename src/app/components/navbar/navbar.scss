@@ -1,0 +1,96 @@
+$margin-down: .6rem;
+
+.navbar {
+  background: $body-text;
+  color: $general-links;
+  padding: .5rem;
+  position: relative;
+  min-height: 2.8rem;
+  margin-bottom: 1rem;
+  
+  a {
+    color: $general-links;
+    display: inline-flex;
+    text-decoration: none;
+  }
+  
+  .header {
+    float: left;
+    margin: $margin-down 0 0 3rem;
+
+    .title {
+      color: $general-links;
+      font-size: 1.3rem;
+
+      .title-text {
+        margin-left: 1rem;
+      }
+
+      .dark {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  .logo-pic {//81D1BD B3B6BD
+    height: 1.7rem;
+    width: auto;
+  }
+
+  .right-side {
+    display: inline-flex;
+    float: right;
+    margin: $margin-down - .1rem;
+
+    .dropdown {
+      background: $general-links;
+      border-radius: .2rem;
+      color: $body-text;
+      padding: .8rem;
+      position: absolute;
+      right: 3rem;
+      top: 4rem;
+
+      a {
+        color: $body-text;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .popover-button {
+      cursor: pointer;
+      height: 1.7rem;
+      margin-right: 1rem;
+    }
+
+    .profile-pic {
+      border-radius: .2rem;
+      cursor: pointer;
+      height: 2rem;
+      margin-right: 3rem;
+      width: 2rem;
+      
+    }
+
+    .search-input {
+      background: $body-text;
+      border: .1rem $dark-gray solid;
+      border-radius: .2rem;
+      color: $general-links;
+      height: 1.7rem;
+      padding-left: .5rem;
+      margin-right: 1rem;
+      width: 11rem;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+  
+}
