@@ -6,7 +6,6 @@ $margin-down: .6rem;
   padding: .5rem;
   position: relative;
   min-height: 2.8rem;
-  margin-bottom: 1rem;
   
   a {
     color: $general-links;
@@ -22,13 +21,18 @@ $margin-down: .6rem;
       color: $general-links;
       font-size: 1.3rem;
 
-      .title-text {
-        margin-left: 1rem;
-      }
-
       .dark {
         color: $dark-gray;
       }
+
+      .light {
+        color: $general-links;
+      }
+
+      .title-text {
+        margin-left: 1rem;
+      }
+      
     }
   }
 
@@ -43,23 +47,36 @@ $margin-down: .6rem;
     margin: $margin-down - .1rem;
 
     .dropdown {
-      background: $general-links;
+      background: $light-gray;
       border-radius: .2rem;
-      color: $body-text;
-      padding: .8rem;
+      color: $general-links;
       position: absolute;
       right: 3rem;
-      top: 4rem;
+      top: 3.5rem;
 
       a {
-        color: $body-text;
+        color: $dark-gray;
       }
 
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
+
+        li {
+          border-bottom: .1rem solid $general-links;
+          padding: .3rem 1rem .3rem 1rem;
+        }
+
+        .last-li-item {
+          border: 0;
+        }
       }
+    }
+
+    .pic-and-dropdown {
+      width: 4rem;
+      height: 3rem;
     }
 
     .popover-button {
@@ -74,11 +91,13 @@ $margin-down: .6rem;
       height: 2rem;
       margin-right: 3rem;
       width: 2rem;
-      
     }
 
     .search-input {
-      background: $body-text;
+      // background: $body-text;
+      background: url(../assets/images/addSpeachBubble_coloured.png) no-repeat scroll .5rem .5rem;
+      background-position: right center;
+      background-size: 1rem 1rem;
       border: .1rem $dark-gray solid;
       border-radius: .2rem;
       color: $general-links;
@@ -89,6 +108,10 @@ $margin-down: .6rem;
 
       &:focus {
         outline: 0;
+      }
+
+      @media (max-width: $break-point-small) {
+        display: none; // hide when small enough screen
       }
     }
   }

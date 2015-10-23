@@ -13,16 +13,18 @@
     <!-- <button ng-click="vm.openCreateNewMessage()" class="popover-button"> Create</button> -->
     
     <input type="text" class="search-input" />
-    <img src="assets/images/profile_pic.png" class="profile-pic" ng-mouseenter="vm.showDropdown = true">
-    <div class="dropdown" ng-if="vm.showDropdown">
-      <ul>
-        <li><a ui-sref="profile">Profile</a></li>
-        <li><a ui-sref="followers">Followers</a></li>
-        <li><a ui-sref="following">Following</a></li>
-        <li><a ui-sref="settings">Settings</a></li>
-      </ul>
-      
+    <div class="pic-and-dropdown" ng-mouseenter="vm.showDropdown = true" ng-mouseleave="vm.showDropdown = false">
+      <img src="assets/images/profile_pic.png" class="profile-pic">
+      <div class="dropdown" ng-if="vm.showDropdown">
+        <ul>
+          <li><a ui-sref="profile">Profile</a></li>
+          <li><a ui-sref="followers">Followers</a></li>
+          <li><a ui-sref="following">Following</a></li>
+          <li class="last-li-item"><a ui-sref="settings">Settings</a></li>
+        </ul>
+      </div>
     </div>
+      
     
   </div>
 </div>
