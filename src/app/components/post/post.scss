@@ -1,12 +1,56 @@
 .post {
 
-	a {
-		color: gray;
-		text-decoration: none;
-	}
+  a {
+    color: gray;
+    text-decoration: none;
+  }
 
-	.at-mention {
-		color: gray;
-	}
-	
+  .at-mention {
+    color: gray;
+  } 
+}
+
+.home-create {
+  padding-top: 7rem;
+
+  ::-webkit-input-placeholder {
+   color: $light-gray;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $light-gray;  
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $light-gray;  
+  }
+
+  :-ms-input-placeholder {  
+    color: $light-gray;  
+  }
+
+  .create-input {
+    border: 0;
+    background: $secondary-links;
+    color: $light-gray;
+    font-size: 2rem;
+    height: 4rem;
+    margin: 3rem 0 0 1rem;
+    width: 92%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  form {
+    background: $secondary-links;
+    border-radius: .2rem;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .7;
+    width: 35rem;
+  }
+    
 }

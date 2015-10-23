@@ -26,5 +26,11 @@ module simplysocial {
       this.message = "";
     }
 
+    public handleKeyDown($event) {
+      if ($event.keyCode === 13) {
+        this.createPost();
+      }
+    }
+
   }
 }
