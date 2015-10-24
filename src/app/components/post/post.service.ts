@@ -42,7 +42,7 @@ module simplysocial {
         timestamp: Date.now(),
         message: message,
         replies: [],
-        relativeTime: moment(Date.now()).fromNow()
+        relativeTime: moment(Date.now()).fromNow(true)
       };
     }
   }

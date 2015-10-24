@@ -11,6 +11,10 @@
     padding-top: 5.5rem;
     width: 35rem;
 
+    @media (max-width: $break-point-small) {
+      width: 15rem;
+    }
+
     button {
       background: transparent;
       border: 0;

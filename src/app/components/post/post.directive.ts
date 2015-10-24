@@ -25,11 +25,11 @@ module simplysocial {
 
     constructor(private moment: moment.MomentStatic, private postService: PostService) {
       console.log(this.data);
-      this.data.relativeTime = moment(this.data.timestamp).fromNow();
+      this.data.relativeTime = moment(this.data.timestamp).fromNow(true);
 
       if (this.data.replies) {
         for (var i = 0; i < this.data.replies.length; i++) {
-          this.data.replies[i].relativeTime = moment(this.data.replies[i].timestamp).fromNow();
+          this.data.replies[i].relativeTime = moment(this.data.replies[i].timestamp).fromNow(true);
         }
       }
         

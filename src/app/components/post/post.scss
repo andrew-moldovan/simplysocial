@@ -2,26 +2,61 @@
   margin: 2rem auto 0 auto;
   width: 35rem;
 
+  @media (max-width: $break-point-small) {
+    width: 15rem;
+  }
+
   .post {
     border: .1rem solid $general-links;
     border-radius: .2rem;
-    display: inline-flex;
+    position: relative;
     margin-bottom: 2rem;
     padding: 1rem;
     width: 35rem;
+
+    .top-items {
+      display: inline-flex;
+    }
+
+    .bottom-items {
+      margin: 1rem 0 .5rem 0;
+    }
+
+    .expand-collapse {
+      background: transparent;
+      border: 0;
+      color: $general-links;
+      cursor: pointer;
+      font-size: .8rem;
+      margin-left: 5rem;
+      padding: 0;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .pull-right-bottom-items {
+      color: $general-links;
+      float: right;
+    }
 
     .profile-pic {
       @include profilePic();
     }
 
     a {
-      color: gray;
+      color: $general-links;
       text-decoration: none;
     }
 
     .at-mention {
-      color: gray;
-    } 
+      color: $general-links;
+    }
+
+    @media (max-width: $break-point-small) {
+      width: 15rem;
+    }
   }
 }
   
