@@ -24,7 +24,6 @@ module simplysocial {
     public replyMessage: string = "";
 
     constructor(private moment: moment.MomentStatic, private postService: PostService) {
-      console.log(this.data);
       this.data.relativeTime = moment(this.data.timestamp).fromNow(true);
 
       if (this.data.replies) {
@@ -35,12 +34,19 @@ module simplysocial {
         
     }
 
+    public handleReplyKeyPress($event) {
+      if ($event.keyCode === 13) {
+        this.reply();
+      }
+    }
+
     public expandCollapse() {
       this.isExpanded = !this.isExpanded;
     }
 
     public reply() {
       this.postService.createReply(this.replyMessage, this.data);
+      this.replyMessage = "";
     }
   }
 }

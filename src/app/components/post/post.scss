@@ -14,12 +14,23 @@
     padding: 1rem;
     width: 35rem;
 
-    .top-items {
-      display: inline-flex;
+    a {
+      color: $general-links;
+      text-decoration: none;
+    }
+
+    .at-mention {
+      color: $general-links;
     }
 
     .bottom-items {
       margin: 1rem 0 .5rem 0;
+    }
+
+    .displayName {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .expand-collapse {
@@ -28,12 +39,16 @@
       color: $general-links;
       cursor: pointer;
       font-size: .8rem;
-      margin-left: 5rem;
+      margin-left: 4.5rem;
       padding: 0;
 
       &:focus {
         outline: 0;
       }
+    }
+
+    .no-replies-bottom-items {
+      margin: 1rem 0 1.5rem 0;
     }
 
     .pull-right-bottom-items {
@@ -42,16 +57,43 @@
     }
 
     .profile-pic {
-      @include profilePic();
+      border-radius: .2rem;
+      height: 2.5rem;
+      margin: 0 1rem 0 1rem;
+      min-width: 2.5rem;
     }
 
-    a {
-      color: $general-links;
-      text-decoration: none;
+    .replies {
+      background: $light-gray;
+      margin: 0 -1rem 0 -1rem;
+      padding: 1rem;
+
+      .reply {
+        margin-bottom: 1rem;
+      }
     }
 
-    .at-mention {
-      color: $general-links;
+    .reply-section {
+      background: $light-gray;
+      margin: -1rem;
+      padding: 0 1rem 1rem 1rem;
+
+      .reply-box {
+        border: .1rem solid $general-links;
+        border-radius: .2rem;
+        height: 2rem;
+        font-size: 1rem;
+        padding-left: .5rem;
+        width: 98%;
+      }
+    }
+
+    .reply-section.no-replies-reply-section {
+      padding-top: 1rem;
+    }
+
+    .top-items {
+      display: inline-flex;
     }
 
     @media (max-width: $break-point-small) {

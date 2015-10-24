@@ -2,35 +2,37 @@
 
   <div class="top-items">
     <img src="assets/images/profile_pic.png" class="profile-pic">
-
     <div class="data">
-      {{post.data.displayName}}
+      <div class="displayName">{{post.data.displayName}}</div>
       <div ng-bind-html="post.data.message"></div>
     </div>
   </div>
 
-  <div class="bottom-items">
+  <div class="bottom-items" ng-class="{'no-replies-bottom-items': post.data.replies.length == 0}">
     <button class="expand-collapse" ng-click="post.expandCollapse()">
       <span ng-if="post.isExpanded">Collapse</span>
       <span ng-if="!post.isExpanded">Expand</span>
     </button>
-    <span class="pull-right-bottom-items">
-      <span class="timestamp">{{post.data.relativeTime}}</span>
-    </span>
-    
+    <div class="pull-right-bottom-items">
+      <div class="timestamp">{{post.data.relativeTime}}</div>
+    </div>
   </div>
     
   <!-- this is if there are replies to show -->
   <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded">
-    <div ng-repeat="reply in post.data.replies">
-      {{reply.displayName}} | {{reply.relativeTime}}
-      <div ng-bind-html="reply.message"></div>  
+    <div ng-repeat="reply in post.data.replies" class="reply">
+      <div class="top-items">
+        <img src="assets/images/profile_pic.png" class="profile-pic">
+        <div class="data">
+          <div class="displayName">{{reply.displayName}}</div>
+          <div ng-bind-html="reply.message"></div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="reply-section" ng-if="post.isExpanded">
-    <input type="text" ng-model="post.replyMessage">
-    <button ng-click="post.reply()">Reply</button>
+  <div class="reply-section" ng-if="post.isExpanded" ng-class="{'no-replies-reply-section': post.data.replies.length == 0}">
+    <input type="text" ng-model="post.replyMessage" placeholder="Reply..." class="reply-box" ng-keydown="post.handleReplyKeyPress($event)">
   </div>
     
   </div>
