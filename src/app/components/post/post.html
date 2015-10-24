@@ -1,7 +1,7 @@
 <div class="post">
 
   <div class="top-items">
-    <img src="assets/images/profile_pic.png" class="profile-pic">
+    <img ng-src="assets/images/{{post.data.profilePic}}.png" class="profile-pic">
     <div class="data">
       <div class="displayName">{{post.data.displayName}}</div>
       <div ng-bind-html="post.data.message"></div>

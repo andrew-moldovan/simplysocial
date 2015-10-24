@@ -27,14 +27,14 @@ module simplysocial {
 
     createPost(message: string) {
       if (!message || message == '') {
-        return "Please enter a valid message";
+        return true;
       }
       this.posts.data.unshift(this.createPostObj(message));
     }
 
     createReply(message: string, parentPost: any) {
       if (!message || message == '') {
-        return "Please enter a valid message";
+        return true;
       }
       parentPost.replies.push(this.createPostObj(message));
     }
@@ -45,7 +45,7 @@ module simplysocial {
         timestamp: Date.now(),
         message: message,
         replies: [],
-        relativeTime: moment(Date.now()).fromNow(true)
+        relativeTime: moment(new Date(Date.now())).fromNow(true)
       };
     }
   }

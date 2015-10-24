@@ -1,17 +1,64 @@
 [
   { "displayName": "Sam Soffes", 
-    "timestamp": "1445441030000",
+    "timestamp": 1445441030000,
     "message": "How To Get Inspired: the Right Way - Designmodo <a href='http://bit.ly/1lE4uJc'>bit.ly/1lE4uJc</a> Good stuff from <span class='at-mention'>@designmodo</span>!",
     "imageUrl": "../assets/images/pic1.png",
+    "profilePic": "avatar7",
     "replies": [
       { "displayName": "Jed Bridges", "timestamp": "1445443030000", "message": "Great way to start the week. Thanks for sharing" },
       { "displayName": "Ren Walker", "timestamp": "1445445030000", "message": "Feeling inspired now... thanks for the great article <span class='at-mention'>@designmodo!</span>" }
     ]
   },
   { "displayName": "Meg Robichaud", 
-    "timestamp": "1444771738424", 
+    "timestamp": 1444771738424, 
     "message": "My view this morning is simply beautiful",
+    "profilePic": "avatar1",
     "replies": [],
     "imageUrl": "../assets/images/pic2.png"
+  },
+  { "displayName": "Kerem Suer", 
+    "timestamp": 1445703535000, 
+    "message": "8 Apps To Turn Your Pipe Dreams Into Prototypes <a href='http://on.mash.to/1oubyu8'>on.mash.to/1oubyu8</a>",
+    "profilePic": "avatar8",
+    "replies": []
+  },
+  { "displayName": "Liang Shi", 
+    "timestamp": 1445703535000, 
+    "message": "How to get animations out of your head. <a href='http://bit.ly/1q7BngO'>bit.ly/1q7BngO</a> Funny and useful.",
+    "profilePic": "avatar9",
+    "replies": []
+  },
+  { "displayName": "Jenny Shen", 
+    "timestamp": 1445703523000, 
+    "message": "Perfect day to be outside taking pictures <a href='http://instagram.com/p/mV0PUrHRwQ/'>instagram.com/p/mV0PUrHRwQ/</a>",
+    "profilePic" : "avatar6",
+    "replies": [],
+    "imageUrl": "../assets/images/pic3.png"
+  },
+  { "displayName": "Jonathan Moreira",
+    "timestamp": 1445703533000, 
+    "message": "Thoughtful brand decisions vs emotional brand decisions <a href='http://ow.ly/vT2i'>ow.ly/vT2i</a>",
+    "profilePic" : "avatar5",
+    "replies": []
+  },
+  { "displayName": "Jessica Tuan",
+    "timestamp": 1445703533000, 
+    "message": "We don't get this here very often...<a href='http://instagram.com/p/mV0PUrHRwQ'>instagram.com/p/mV0PUrHRwQ</a>",
+    "profilePic" : "avatar4",
+    "replies": [],
+    "imageUrl": "../assets/images/pic5.png"
+  },
+  { "displayName": "Jon Brennan",
+    "timestamp": 1445703323000, 
+    "message": "Had some time to play with the interactive portion of inDesignCC <a href='http://bit.ly/1lE5QD'>bit.ly/1lE5QD</a>",
+    "profilePic" : "avatar2",
+    "replies": []
+  },
+  { "displayName": "Samihah Azim",
+    "timestamp": 1445703323000, 
+    "message": "Love this picture <a href='http://instagram.com/p/mV0PUrHRwQ'>instagram.com/p/mV0PUrHRwQ</a>",
+    "profilePic": "avatar3",
+    "replies": [],
+    "imageUrl": "../assets/images/pic4.png"
   }
 ]

@@ -24,11 +24,11 @@ module simplysocial {
     public replyMessage: string = "";
 
     constructor(private moment: moment.MomentStatic, private postService: PostService) {
-      this.data.relativeTime = moment(this.data.timestamp).fromNow(true);
+      this.data.relativeTime = moment(new Date(this.data.timestamp)).fromNow(true);
 
       if (this.data.replies) {
         for (var i = 0; i < this.data.replies.length; i++) {
-          this.data.replies[i].relativeTime = moment(this.data.replies[i].timestamp).fromNow(true);
+          this.data.replies[i].relativeTime = moment(new Date(this.data.replies[i].timestamp)).fromNow(true);
         }
       }
         

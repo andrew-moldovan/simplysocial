@@ -18,15 +18,16 @@ module simplysocial {
   /** @ngInject */
   class PostCreateController {
     public message: string;
-    public error: string;
+    public error: boolean;
 
     constructor(private postService: PostService) {}
 
     public createPost() {
       this.error = this.postService.createPost(this.message);
-      if (!this.error || this.error !== '') {
+      if (this.error) {
         console.log('Please enter some text for the post');
       }
+      this.error = false;
       this.message = "";
     }
 
