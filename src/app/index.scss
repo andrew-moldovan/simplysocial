@@ -3,7 +3,9 @@ $general-links: #C8CED5;
 $icon-colors: #BEC3CC;
 $dark-gray: #3D3E43;
 $body-text: #262728; //black
-$secondary-links: #00CC99;
+$secondary-links: #00CC99; //light green
+$main-text-input: #00B286;
+$white: #fff;
 
 $break-point-small: 550px;
 
@@ -15,9 +17,22 @@ $break-point-small: 550px;
 // endbower
 
 body {
-	margin: 0;
-	padding: 0;
-	color: $body-text;
+  margin: 0;
+  padding: 0;
+  color: $body-text;
+  font-family: ProximaNova-Regular;
+}
+
+@font-face {
+  font-family: ProximaNova-Regular;
+  src: url(../assets/fonts/ProximaNova-Regular.otf);
+}
+
+@mixin profilePic {
+  border-radius: .2rem;
+  height: 2rem;
+  margin-right: 3rem;
+  width: 2rem;
 }
 
 /**

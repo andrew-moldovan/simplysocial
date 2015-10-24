@@ -5,4 +5,29 @@
     height: 25rem;
     width: auto;
   }
+
+  .filters {
+    margin: 0 auto 0 auto;
+    padding-top: 5.5rem;
+    width: 35rem;
+
+    button {
+      background: transparent;
+      border: 0;
+      color: $white;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: .8rem;
+      margin-right: 2.5rem;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .selected {
+      border-bottom: .25rem $secondary-links solid;
+      padding-bottom: 1.2rem;  
+    }
+  }
 }

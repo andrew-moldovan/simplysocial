@@ -86,11 +86,8 @@ $margin-down: .6rem;
     }
 
     .profile-pic {
-      border-radius: .2rem;
+      @include profilePic();
       cursor: pointer;
-      height: 2rem;
-      margin-right: 3rem;
-      width: 2rem;
     }
 
     .search-input {

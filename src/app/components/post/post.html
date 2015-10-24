@@ -1,22 +1,27 @@
 <div class="post">
-	{{post.data.displayName}} | {{post.data.relativeTime}}
-	<div ng-bind-html="post.data.message"></div>
-	<button ng-click="post.expandCollapse()">Expand/Collapse</button>
+  <img src="assets/images/profile_pic.png" class="profile-pic">
+  
+  <div class="data">
+    {{post.data.displayName}} | {{post.data.relativeTime}}
+    <div ng-bind-html="post.data.message"></div>
+    <button ng-click="post.expandCollapse()">Expand/Collapse</button>
 
-	<!-- this is if there are replies to show -->
-	<div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded">
-		<div ng-repeat="reply in post.data.replies">
-			{{reply.displayName}} | {{reply.relativeTime}}
-			<div ng-bind-html="reply.message"></div>	
-		</div>
-		
-	</div>
+    <!-- this is if there are replies to show -->
+    <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded">
+      <div ng-repeat="reply in post.data.replies">
+        {{reply.displayName}} | {{reply.relativeTime}}
+        <div ng-bind-html="reply.message"></div>  
+      </div>
+      
+    </div>
 
-	<div class="reply-section" ng-if="post.isExpanded">
-		<input type="text" ng-model="post.replyMessage">
-		<button ng-click="post.reply()">Reply</button>
-	</div>
-	
-		
+    <div class="reply-section" ng-if="post.isExpanded">
+      <input type="text" ng-model="post.replyMessage">
+      <button ng-click="post.reply()">Reply</button>
+    </div>
+    
+  </div>
+    
+    
 </div>
 <br>

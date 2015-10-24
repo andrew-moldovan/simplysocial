@@ -1,14 +1,30 @@
-.post {
+.posts {
+  margin: 2rem auto 0 auto;
+  width: 35rem;
 
-  a {
-    color: gray;
-    text-decoration: none;
+  .post {
+    border: .1rem solid $general-links;
+    border-radius: .2rem;
+    display: inline-flex;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 35rem;
+
+    .profile-pic {
+      @include profilePic();
+    }
+
+    a {
+      color: gray;
+      text-decoration: none;
+    }
+
+    .at-mention {
+      color: gray;
+    } 
   }
-
-  .at-mention {
-    color: gray;
-  } 
 }
+  
 
 .home-create {
   padding-top: 7rem;
@@ -31,7 +47,7 @@
 
   .create-input {
     border: 0;
-    background: $secondary-links;
+    background: $main-text-input;
     color: $light-gray;
     font-size: 2rem;
     height: 4rem;
@@ -44,13 +60,17 @@
   }
 
   form {
-    background: $secondary-links;
+    background: $main-text-input;
     border-radius: .2rem;
     height: 10rem;
     margin-left: auto;
     margin-right: auto;
     opacity: .7;
     width: 35rem;
+
+    @media (max-width: $break-point-small) {
+      width: 15rem;
+    }
   }
     
 }

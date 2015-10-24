@@ -6,14 +6,18 @@
 
   <div class="big-image">
   	<post-create></post-create>
+
+    <div class="filters">
+      <button ng-click="main.filter = 0" ng-class="{'selected' : main.filter == 0}">ALL POSTS</button>
+      <button ng-click="main.filter = 1" ng-class="{'selected' : main.filter == 1}">PHOTOS</button>
+      <button ng-click="main.filter = 2" ng-class="{'selected' : main.filter == 2}">VIDEOS</button>
+    </div>
+    
   </div>
 
+  <div class="posts">
+    <post ng-repeat="post in main.posts | filterPosts: main.filter" data="post"></post>
+  </div>
   
-
-  <button ng-click="main.filter = 0">ALL POSTS</button>
-  <button ng-click="main.filter = 1">PHOTOS</button>
-  <button ng-click="main.filter = 2">VIDEOS</button>
-
-  <post ng-repeat="post in main.posts | filterPosts: main.filter" data="post"></post>
 
 </div>
