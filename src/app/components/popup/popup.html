@@ -1,7 +1,12 @@
 <div class="popup">
-	<form>
-		<textarea ng-model="pu.message">
-		</textarea>
-		<button ng-click="pu.createPost(); closeThisDialog()">Create</button>
-	</form>
+  <div class="title">Create new message</div>
+  
+  <textarea ng-model="pu.message">
+  </textarea>
+
+  <div class="bottom-items">
+    <button ng-click="pu.createPost(); closeThisDialog()">Post</button>
+  </div>
+  
+  
 </div>

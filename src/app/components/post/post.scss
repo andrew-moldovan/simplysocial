@@ -9,6 +9,7 @@
   .post {
     border: .1rem solid $general-links;
     border-radius: .2rem;
+    color: $post-font-gray;
     position: relative;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -28,6 +29,7 @@
     }
 
     .displayName {
+      color: $post-display-name;
       font-weight: 700;
       font-size: 1.2rem;
       margin-bottom: 1rem;
