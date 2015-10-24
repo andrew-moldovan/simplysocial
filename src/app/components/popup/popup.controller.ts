@@ -4,12 +4,17 @@ module simplysocial {
   /** @ngInject */
   export class PopUpController {
     public message: string;
+    public error: string;
 
-    constructor(private postService: PostService) {}
+    constructor(private postService: PostService, private $scope: any) {}
 
-    public createPost() {
-      this.postService.createPost(this.message);
+    public createPost($event) {
+      this.error = '';
+      this.error = this.postService.createPost(this.message);
       this.message = "";
+      if (!this.error || this.error === '') {
+        this.$scope.closeThisDialog();
+      }
     }
 
   }

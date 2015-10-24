@@ -2,12 +2,12 @@ module simplysocial {
   'use strict';
 
   export class MainController {
-    public posts: any[] = [];
+    public posts;
     public filter: number = 0;
 
     /* @ngInject */
     constructor(private postService: PostService) {
-      this.posts = postService.getPosts();
+      this.posts = this.postService.posts;
     }
   }
 

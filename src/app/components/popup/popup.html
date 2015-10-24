@@ -5,7 +5,8 @@
   </textarea>
 
   <div class="bottom-items">
-    <button ng-click="pu.createPost(); closeThisDialog()">Post</button>
+    <div class="error">{{pu.error}}</div>
+    <button ng-click="pu.createPost($event)">Post</button>
   </div>
   
   

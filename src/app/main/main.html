@@ -14,9 +14,9 @@
     </div>
     
   </div>
-
+  
   <div class="posts">
-    <post ng-repeat="post in main.posts | filterPosts: main.filter" data="post"></post>
+    <post ng-repeat="post in main.posts.data | filterPosts: main.filter" data="post"></post>
   </div>
   
 

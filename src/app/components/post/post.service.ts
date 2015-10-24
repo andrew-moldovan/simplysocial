@@ -2,38 +2,40 @@ module simplysocial {
   'use strict';
 
   export class PostService {
-    private posts: any[] = [];
+    public posts: any = {};
     
     /** @ngInject */
-    constructor(private $log: ng.ILogService, private userService: UserService) {
-      this.posts = [
-        { displayName: "Sam Soffes", 
-          timestamp: 1445441030000,
-          message: "How To Get Inspired: the Right Way - Designmodo <a href='http://bit.ly/1lE4uJc'>bit.ly/1lE4uJc</a> Good stuff from <span class='at-mention'>@designmodo</span>!",
-          imageUrl: '../assets/images/pic1.png',
-          replies: [
-            { displayName: "Jed Bridges", timestamp: 1445443030000, message: "Great way to start the week. Thanks for sharing" },
-            { displayName: "Ren Walker", timestamp: 1445445030000, message: "Feeling inspired now... thanks for the great article <span class='at-mention'>@designmodo!</span>" },
-          ]
-        },
-        { displayName: "Meg Robichaud", 
-          timestamp: 1444771738424, 
-          message: "My view this morning is simply beautiful",
-          replies: [],
-          imageUrl: '../assets/images/pic2.png'
-        }
-      ];
+    constructor(private $log: ng.ILogService, private userService: UserService, private $http: ng.IHttpService) {
+      this.posts.loading = true;
+      this.posts.data = [];
+      this.getPosts()
+        .then((data: any) => {
+          this.posts.data = data;
+          this.posts.loading = false;
+        });
     }
 
     getPosts() {
-      return this.posts;
+      return this.$http.get('/assets/data/posts.json')
+        .then((response: any) => {
+          return response.data;
+        })
+        .catch((error: any) => {
+          console.error('Failed to fetch posts', error);
+        });
     }
 
     createPost(message: string) {
-      this.posts.unshift(this.createPostObj(message));
+      if (!message || message == '') {
+        return "Please enter a valid message";
+      }
+      this.posts.data.unshift(this.createPostObj(message));
     }
 
     createReply(message: string, parentPost: any) {
+      if (!message || message == '') {
+        return "Please enter a valid message";
+      }
       parentPost.replies.push(this.createPostObj(message));
     }
 

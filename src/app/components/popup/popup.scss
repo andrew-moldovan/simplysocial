@@ -5,7 +5,9 @@
 .popup {
 
   .bottom-items {
-    margin-bottom: 2rem;
+    display: inline-flex;
+    height: 1.3rem;
+    width: 100%;
   }
 
   button {
@@ -13,9 +15,16 @@
     border: 0;
     border-radius: .2rem;
     color: white;
-    float: right;
     font-size: 1rem;
     padding: .6rem 1.4rem .6rem 1.4rem;
+    position: absolute;
+    right: 1rem;
+  }
+
+  .error {
+    color: $red;
+    font-size: .8rem;
+    // margin-bottom: 2rem;
   }
 
   .title {
