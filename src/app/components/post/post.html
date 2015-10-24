@@ -17,6 +17,8 @@
       <div class="timestamp">{{post.data.relativeTime}}</div>
     </div>
   </div>
+
+  <img class="post-image" ng-show="post.data.imageUrl" ng-src="{{post.data.imageUrl}}">
     
   <!-- this is if there are replies to show -->
   <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded">

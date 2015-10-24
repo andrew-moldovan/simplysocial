@@ -18,7 +18,7 @@ $break-point-small: 550px;
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 3.8rem 0 0 0;
   color: $body-text;
   font-family: ProximaNova-Regular;
 }
@@ -26,6 +26,11 @@ body {
 @font-face {
   font-family: ProximaNova-Regular;
   src: url(../assets/fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+  font-family: ProximaNova-Light;
+  src: url(../assets/fonts/ProximaNova-Light.otf);
 }
 
 @mixin profilePic {

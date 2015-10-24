@@ -51,6 +51,12 @@
       margin: 1rem 0 1.5rem 0;
     }
 
+    .post-image{
+      margin-left: -1rem;
+      max-height: 21rem;
+      width: 37rem;
+    }
+
     .pull-right-bottom-items {
       color: $general-links;
       float: right;
@@ -126,8 +132,10 @@
     border: 0;
     background: $main-text-input;
     color: $light-gray;
-    font-size: 2rem;
+    opacity: .6;
     height: 4rem;
+    font-size: 2rem;
+    font-family: ProximaNova-Light;
     margin: 3rem 0 0 1rem;
     width: 92%;
 

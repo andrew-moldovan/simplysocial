@@ -4,9 +4,13 @@ $margin-down: .6rem;
   background: $body-text;
   color: $general-links;
   padding: .5rem;
-  position: relative;
-  min-height: 2.8rem;
-  
+  position: fixed;
+  max-height: 2.8rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+
   a {
     color: $general-links;
     display: inline-flex;
