@@ -14,6 +14,8 @@
       <span ng-if="!post.isExpanded">Expand</span>
     </button>
     <div class="pull-right-bottom-items">
+      <img src="assets/images/reply.png" class="post-icon">
+      <img src="assets/images/heart.png" class="post-icon">
       <div class="timestamp">{{post.data.relativeTime}}</div>
     </div>
   </div>
@@ -21,7 +23,7 @@
   <img class="post-image" ng-show="post.data.imageUrl" ng-src="{{post.data.imageUrl}}">
     
   <!-- this is if there are replies to show -->
-  <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded">
+  <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded" ng-class="{'extra-margin-top': post.data.imageUrl}">
     <div ng-repeat="reply in post.data.replies" class="reply">
       <div class="top-items">
         <img src="assets/images/profile_pic.png" class="profile-pic">
@@ -33,10 +35,8 @@
     </div>
   </div>
 
-  <div class="reply-section" ng-if="post.isExpanded" ng-class="{'no-replies-reply-section': post.data.replies.length == 0}">
-    <input type="text" ng-model="post.replyMessage" placeholder="Reply..." class="reply-box" ng-keydown="post.handleReplyKeyPress($event)">
-  </div>
-    
+  <div class="reply-section" ng-if="post.isExpanded" ng-class="{'no-replies-reply-section': post.data.replies.length == 0, 'extra-margin-top': post.data.imageUrl && post.data.replies.length == 0}">
+    <input type="text" ng-model="post.replyMessage" placeholder="Reply..." class="reply-box" ng-keydown="post.handleReplyKeyPress($event)">  
   </div>
     
     

@@ -60,13 +60,16 @@
     }
 
     .post-image{
-      margin-left: -1rem;
+      border-bottom-right-radius: .2rem;
+      border-bottom-left-radius: .2rem;
+      margin: 0 0 -1.2rem -1rem;
       max-height: 21rem;
       width: $post-width + 2rem;
     }
 
     .pull-right-bottom-items {
       color: $general-links;
+      display: inline-flex;
       float: right;
     }
 
@@ -77,6 +80,12 @@
       min-width: 2.5rem;
     }
 
+    .post-icon {
+      height: .8rem;
+      margin-right: 1rem;
+      width: .8rem;
+    }
+
     .replies {
       background: $light-gray;
       margin: 0 -1rem 0 -1rem;
@@ -85,6 +94,10 @@
       .reply {
         margin-bottom: 1rem;
       }
+    }
+
+    .replies.extra-margin-top {
+      margin-top: 1rem;
     }
 
     .reply-section {
@@ -100,6 +113,9 @@
         padding-left: .5rem;
         width: 98%;
       }
+    }
+    .reply-section.extra-margin-top {
+      margin-top: 1rem;
     }
 
     .reply-section.no-replies-reply-section {
