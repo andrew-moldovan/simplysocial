@@ -19,7 +19,7 @@ $margin-down: .6rem;
   
   .header {
     float: left;
-    margin: $margin-down 0 0 3rem;
+    margin: $margin-down 0 0 4rem;
 
     .title {
       color: $general-links;
@@ -34,21 +34,22 @@ $margin-down: .6rem;
       }
 
       .title-text {
-        margin-left: 1rem;
+        font-size: 1.2rem;
+        margin: .3rem 0 0 1rem;
       }
       
     }
   }
 
   .logo-pic {//81D1BD B3B6BD
-    height: 1.7rem;
+    height: 1.6rem;
     width: auto;
   }
 
   .right-side {
     display: inline-flex;
     float: right;
-    margin: $margin-down - .1rem;
+    margin: $margin-down - .1rem 3rem $margin-down - .1rem $margin-down - .1rem;
 
     .dropdown {
       background: $light-gray;
@@ -57,6 +58,7 @@ $margin-down: .6rem;
       position: absolute;
       right: 3rem;
       top: 3.5rem;
+      z-index: 9999
 
       a {
         color: $dark-gray;
@@ -85,8 +87,8 @@ $margin-down: .6rem;
 
     .popover-button {
       cursor: pointer;
-      height: 1.7rem;
-      margin-right: 1rem;
+      height: 1.6rem;
+      margin: .2rem 1.6rem 0 0;
     }
 
     .profile-pic {
@@ -95,17 +97,16 @@ $margin-down: .6rem;
     }
 
     .search-input {
-      // background: $body-text;
-      background: url(../assets/images/addSpeachBubble_coloured.png) no-repeat scroll .5rem .5rem;
-      background-position: right center;
+      background: url(../assets/images/search-icon.png) no-repeat scroll;
+      background-position: 11rem;
       background-size: 1rem 1rem;
       border: .1rem $dark-gray solid;
       border-radius: .2rem;
       color: $general-links;
       height: 1.7rem;
-      padding-left: .5rem;
+      padding: 0 1.5rem 0 .5rem;
       margin-right: 1rem;
-      width: 11rem;
+      width: 10.5rem;
 
       &:focus {
         outline: 0;
