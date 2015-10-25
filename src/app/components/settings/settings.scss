@@ -41,6 +41,34 @@
     .notification-setting {
       margin-top: 1rem;
     }
+
+    .switch-and-text {
+      display: inline-flex;
+    }
+
+    .switch-text {
+      margin: .5rem 0 0 1rem;
+    }
+
+    //override the package css
+    .switch {
+      height: 1.5rem;
+      width: 3rem;
+    }
+
+    .switch small {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    .switch.checked {
+      background: $main-text-input;
+      border-color: $main-text-input;
+    }
+
+    .switch.checked small {
+      left: 1.5rem;
+    }
   }
 
   .privacy {
@@ -103,4 +131,5 @@
     font-weight: 700;
     margin-bottom: 1rem;
   }
+
 }

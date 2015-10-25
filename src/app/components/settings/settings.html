@@ -22,9 +22,16 @@
   
   <div class="notifications">
     <div class="title notification-title">NOTIFICATIONS</div>
-    <div class="notification-setting" ng-repeat="notification in settings.user.notificationSettings">
-      <input type="checkbox" ng-model="notification.value">{{notification.text}}
-    </div>
+    <form>
+      <div class="notification-setting" ng-repeat="notification in settings.user.notificationSettings">
+        <!-- switches -->
+        <div class="switch-and-text">
+          <switch id="enabled" name="enabled" ng-model="notification.value" class="green"></switch>
+          <div class="switch-text">{{notification.text}}</div>
+        </div>
+          
+      </div>
+    </form>
   </div>
 
   <div class="privacy">

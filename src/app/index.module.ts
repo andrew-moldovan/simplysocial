@@ -19,7 +19,7 @@ declare var moment: moment.MomentStatic;
 module simplysocial {
   'use strict';
 
-  angular.module('simplysocial', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ngDialog'])
+  angular.module('simplysocial', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ngDialog', 'uiSwitch'])
     .constant('moment', moment)
     .config(Config)
 

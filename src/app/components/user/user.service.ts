@@ -15,10 +15,10 @@ module simplysocial {
         password: "some-hashed-value",
         email: "andrew@andrewmoldovan.com",
         notificationSettings: [
-          { text: "Email me when my posts are marked as favorites", value: true },
-          { text: "Email me when I'm mentioned", value: true },
-          { text: "Email me when I get a reply", value: true },
-          { text: "Email me when someone follows me", value: true }
+          { id: "favorite", text: "Email me when my posts are marked as favorites", value: true },
+          { id: "mentioned", text: "Email me when I'm mentioned", value: true },
+          { id: "reply", text: "Email me when I get a reply", value: true },
+          { id: "follow", text: "Email me when someone follows me", value: true }
         ],
         privacySettings: [
           {
