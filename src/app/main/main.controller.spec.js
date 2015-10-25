@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('controllers', function(){
+  describe('main-controller', function(){
 
     beforeEach(module('simplysocial'));
 
