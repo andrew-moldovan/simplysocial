@@ -7,7 +7,8 @@ module simplysocial {
     return {
       restrict: 'E',
       scope: {
-        data: "="
+        data: "=",
+        grid: "="
       },
       templateUrl: 'app/components/post/post.html',
       controller: PostController,
@@ -20,6 +21,7 @@ module simplysocial {
   /** @ngInject */
   class PostController {
     public data: any;
+    public grid: boolean;
     public isExpanded: boolean = false;
     public replyMessage: string = "";
 

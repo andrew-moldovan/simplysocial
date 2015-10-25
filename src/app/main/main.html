@@ -3,7 +3,7 @@
   <div>
     <simply-social-navbar></simply-social-navbar>
   </div>
-
+    
   <div class="big-image">
     <img src="assets/images/header-bg.png" class="scrollable-header-image">    
   	<post-create></post-create>
@@ -12,13 +12,27 @@
       <button ng-click="main.filter = 0" ng-class="{'selected' : main.filter == 0}">ALL POSTS</button>
       <button ng-click="main.filter = 1" ng-class="{'selected' : main.filter == 1}">PHOTOS</button>
       <button ng-click="main.filter = 2" ng-class="{'selected' : main.filter == 2}">VIDEOS</button>
+      <button ng-click="main.grid = false">List</button>
+      <button ng-click="main.createGrid()">Grid</button>
     </div>
     
   </div>
   
-  <div class="posts">
-    <post ng-repeat="post in main.posts.data | filterPosts: main.filter" data="post"></post>
+  <div class="posts" ng-if="!main.grid">
+    <post ng-repeat="post in main.posts.data | filterPosts: main.filter" data="post" grid="false"></post>
   </div>
-  
+
+  <div class="posts-grid" ng-if="main.grid">
+    <div class="column">
+      <post ng-repeat="post in main.leftColumn | filterPosts: main.filter" data="post" grid="true"></post>
+    </div>
+    <div class="column">
+      <post ng-repeat="post in main.middleColumn | filterPosts: main.filter" data="post" grid="true"></post>
+    </div>
+    <div class="column">
+      <post ng-repeat="post in main.rightColumn | filterPosts: main.filter" data="post" grid="true"></post>
+    </div>
+    
+  </div>
 
 </div>
