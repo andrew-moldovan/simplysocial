@@ -1,12 +1,14 @@
 $light-gray: #F3F4F6;
-$general-links: #C8CED5;
-$icon-colors: #BEC3CC;
+$general-links: #C8CED5; // darker gray
+$icon-colors: #BEC3CC; // darker gray
 $dark-gray: #3D3E43;
-$post-font-gray: #a9adb2;
-$post-display-name: #3f454d;
+$post-font-gray: #a9adb2; // gray for post fonts
+$dark-gray-for-settings: #444B54;
+$light-gray-for-settings: #858A91;
+$post-display-name: #3f454d; // even darker
 $body-text: #262728; //black
 $secondary-links: #00CC99; //light green
-$main-text-input: #00B286;
+$main-text-input: #00B286; //dark green
 $white: #fff;
 $red: #F44336;
 
@@ -41,6 +43,15 @@ body {
   height: 2rem;
   margin-right: 3rem;
   min-width: 2rem;
+}
+
+.btn {
+  background: $main-text-input;
+  border: 0;
+  border-radius: .2rem;
+  color: white;
+  font-size: 1rem;
+  padding: .6rem 1.4rem .6rem 1.4rem;
 }
 
 /**

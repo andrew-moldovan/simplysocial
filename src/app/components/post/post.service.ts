@@ -44,6 +44,7 @@ module simplysocial {
         displayName: this.userService.getLoggedInUser().displayName,
         timestamp: Date.now(),
         message: message,
+        profilePic: 'profile_pic',
         replies: [],
         relativeTime: moment(new Date(Date.now())).fromNow(true)
       };

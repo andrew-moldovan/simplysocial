@@ -22,7 +22,7 @@ module simplysocial {
         ],
         privacySettings: [
           {
-            grouping: "tags",
+            grouping: "TAGS",
             selected: 'anyone',
             values: [
               { text: "allow anyone to tag me", value: 'anyone' },
@@ -31,24 +31,27 @@ module simplysocial {
             ]
           },
           {
-            grouping: "location",
+            grouping: "LOCATION",
             selected: 'add',
             values: [
-              { text: "add a location to my posts", value: 'add' }
+              { text: "add a location to my posts", value: 'add' },
+              { text: "Don't add a location to my posts", value: 'noadd' }
             ]
           },
           {
-            grouping: "email",
+            grouping: "EMAIL",
             selected: 'find',
             values: [
-              { text: "let others find me by my email address", value: 'find' }
+              { text: "let others find me by my email address", value: 'find' },
+              { text: "don't let others find me by my email address", value: 'donotfind' }
             ]
           },
           {
-            grouping: "ads",
+            grouping: "ADS",
             selected: 'tailor',
             values: [
-              { text: "tailor ads based on my information", value: 'tailor' }
+              { text: "tailor ads based on my information", value: 'tailor' },
+              { text: "don't tailor ads based on my information", value: 'notailor' }
             ]
           }
           

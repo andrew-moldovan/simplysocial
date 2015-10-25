@@ -1,0 +1,106 @@
+.settings {
+  width: 36rem;
+  margin: 3rem auto 0 auto;
+
+  h1 {
+    color: $dark-gray-for-settings;
+    margin-bottom: 3rem;
+  }
+
+  .account {
+    border-bottom: .1rem solid $general-links;
+    display: inline-flex;
+    padding-bottom: 3rem;
+    width: 100%;
+
+    .right-account {
+      width: 100%;
+      margin-top: 2rem;
+      
+      input {
+        border: .1rem solid $general-links;
+        border-radius: .2rem;
+        height: 2rem;
+        font-size: 1rem;
+        margin: 0 0 1rem 3rem;
+        padding-left: .5rem;
+        width: 70%;
+      }
+    }
+  }
+
+  .notifications {
+    border-bottom: .1rem solid $general-links;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+
+    .notification-title {
+      margin-bottom: 1.5rem;
+    }
+    
+    .notification-setting {
+      margin-top: 1rem;
+    }
+  }
+
+  .privacy {
+    border-bottom: .1rem solid $general-links;
+    padding-bottom: 3rem;
+
+    input[type="radio"] {
+      display: none; //hide the original radio button and create our own below
+    }
+
+    input[type="radio"] + label {
+      color: $body-text;
+      font-size: 1rem;
+    }
+
+    input[type="radio"] + label span {
+      border-radius: 50%;
+      box-shadow: 
+        0 0 0 .2rem $white,
+        0 0 0 .3rem $general-links;
+      cursor: pointer;
+      display: inline-block;
+      height: 1rem;
+      margin: .5rem 1rem .5rem 0;
+      vertical-align: middle;
+      width: 1rem;
+    }
+
+    input[type="radio"] + label span {
+      background-color: $white;
+    }
+
+    input[type="radio"]:checked + label span {
+      background-color: $main-text-input;
+    }
+
+    .privacy-title {
+      margin: 3rem 0 1rem 0;
+    }
+
+    .sub-title {
+      color: $light-gray-for-settings;
+      font-size: .8rem;
+      margin: 1rem 0 1rem 0;
+    }
+  }
+
+  .profile-pic-settings {
+    border-radius: .2rem;
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+
+  .save-btn {
+    margin: 3rem 0 3rem 0;
+  }
+
+  .title {
+    color: $light-gray-for-settings;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
