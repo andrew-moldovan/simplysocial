@@ -19,6 +19,7 @@
   .filters {
     margin: 0 auto 0 auto;
     padding-top: 5.5rem;
+    position: relative;
     width: $post-width;
 
     button {
@@ -33,6 +34,12 @@
       &:focus {
         outline: 0;
       }
+    }
+
+    .options {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
     }
 
     .selected {

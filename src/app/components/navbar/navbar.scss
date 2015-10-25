@@ -47,7 +47,6 @@ $margin-down: .6rem;
   }
 
   .right-side {
-    display: inline-flex;
     float: right;
     margin: $margin-down - .1rem 3rem $margin-down - .1rem $margin-down - .1rem;
 
@@ -80,7 +79,7 @@ $margin-down: .6rem;
       }
     }
 
-    .pic-and-dropdown {
+    .flexbox .pic-and-dropdown {
       width: 4rem;
       height: 3rem;
     }
@@ -118,4 +117,16 @@ $margin-down: .6rem;
     }
   }
   
+}
+
+.no-flexbox .right-side {
+  display: inline;
+}
+
+.flexbox .right-side {
+  display: inline-flex;
+}
+
+.no-flexbox .pic-and-dropdown {
+  display: inline;
 }

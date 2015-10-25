@@ -12,8 +12,11 @@
       <button ng-click="main.filter = 0" ng-class="{'selected' : main.filter == 0}">ALL POSTS</button>
       <button ng-click="main.filter = 1" ng-class="{'selected' : main.filter == 1}">PHOTOS</button>
       <button ng-click="main.filter = 2" ng-class="{'selected' : main.filter == 2}">VIDEOS</button>
-      <button ng-click="main.grid = false">List</button>
-      <button ng-click="main.createGrid()">Grid</button>
+      <span class="options">
+        <img src="assets/images/list.png" ng-if="main.showGridOption" ng-click="main.grid = false">
+        <img src="assets/images/grid.png" ng-if="main.showGridOption" ng-click="main.createGrid()">
+      </span>
+        
     </div>
     
   </div>

@@ -8,10 +8,22 @@ module simplysocial {
     public leftColumn: any[] = [];
     public middleColumn: any[] = [];
     public rightColumn: any[] = [];
+    public showGridOption: boolean = true;
 
     /* @ngInject */
-    constructor(private postService: PostService) {
+    constructor(private postService: PostService, private $window, private $scope) {
       this.posts = this.postService.posts;
+
+      if ($window.innerWidth < 900) {
+        this.showGridOption = false;
+      }
+
+      angular.element($window).bind('resize', () => {
+        if ($window.innerWidth < 900) {
+          this.grid = false;
+          $scope.$apply();
+        }
+      });
     }
 
     public createGrid() {

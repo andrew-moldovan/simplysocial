@@ -23,4 +23,5 @@ why typescript
 features
 
 known bugs
+didn't have time to convert things to svg to handle the icons properly
 

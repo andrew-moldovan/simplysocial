@@ -31,12 +31,20 @@
       margin-left: 3.5rem;
     }
 
+    .data {
+      max-width: 90%;
+    }
+
     .post-image { 
       width: calc(100% + 2rem);
     }
 
     .profile-pic {
       margin-left: 0rem;
+    }
+
+    .top-items {
+      width: 100%;
     }
   }
 }
