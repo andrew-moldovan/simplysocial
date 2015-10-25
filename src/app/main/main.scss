@@ -4,16 +4,22 @@
     background: url(../assets/images/bg.png) no-repeat scroll;
     height: 25rem;
     width: auto;
+
+    @media (max-width: $break-point-small) {
+      width: $post-width + 5rem;
+    }
+    @media (min-width: $break-point-small) and (max-width: $break-point-medium) {
+      width: $post-width + 10rem;
+    }
+    @media (min-width: $break-point-medium) and (max-width: $break-point-medium2) {
+      width: $post-width + 15rem;
+    }
   }
 
   .filters {
     margin: 0 auto 0 auto;
     padding-top: 5.5rem;
-    width: 35rem;
-
-    @media (max-width: $break-point-small) {
-      width: 15rem;
-    }
+    width: $post-width;
 
     button {
       background: transparent;

@@ -1,6 +1,9 @@
 .settings {
   width: 36rem;
   margin: 3rem auto 0 auto;
+  @media (max-width: $break-point-small) {
+    padding-left: 2rem;
+  }
 
   h1 {
     color: $dark-gray-for-settings;
