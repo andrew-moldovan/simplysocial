@@ -16,6 +16,8 @@ module simplysocial {
     }
 
     getPosts() {
+      // I implemented an http call and using a json file instead of just storing the data in the client as an example of how
+      // it would be done if there was a real service call to be making
       return this.$http.get('/assets/data/posts.json')
         .then((response: any) => {
           return response.data;

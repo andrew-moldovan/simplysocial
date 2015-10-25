@@ -8,6 +8,7 @@ module simplysocial {
     /** @ngInject */
     constructor($log: ng.ILogService) {
       this.$log = $log;
+      // All of this should be coming from the server
       this.loggedInUser = {
         displayName: "Andrew Moldovan",
         firstName: "Andrew",
