@@ -20,13 +20,13 @@
     </div>
   </div>
 
-  <img class="post-image" ng-show="post.data.imageUrl" ng-src="{{post.data.imageUrl}}">
+  <img class="post-image" ng-show="post.data.imageUrl" ng-src="{{post.data.imageUrl}}" ng-click="post.openImage()">
     
   <!-- this is if there are replies to show -->
   <div class="replies" ng-if="post.data.replies.length > 0 && post.isExpanded" ng-class="{'extra-margin-top': post.data.imageUrl}">
     <div ng-repeat="reply in post.data.replies" class="reply">
       <div class="top-items">
-        <img src="assets/images/profile_pic.png" class="profile-pic">
+        <img ng-src="assets/images/{{reply.profilePic}}.png" class="profile-pic">
         <div class="data">
           <div class="displayName">{{reply.displayName}}</div>
           <div ng-bind-html="reply.message"></div>

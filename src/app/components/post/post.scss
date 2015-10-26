@@ -43,7 +43,7 @@
       max-width: 90%;
     }
 
-    .post-image { 
+    .post-image {
       width: calc(100% + 2rem);
     }
 
@@ -107,6 +107,7 @@
   .post-image {
     border-bottom-right-radius: .2rem;
     border-bottom-left-radius: .2rem;
+    cursor: pointer;
     margin: 0 0 -1.2rem -1rem;
     max-height: 21rem;
     width: $post-width + 2rem;
@@ -237,4 +238,13 @@
 
 .no-flexbox .timestamp {
   display: inline-block;
+}
+
+.post-popup {
+  
+  img {
+    height: 100%;
+    margin: 1rem 0rem -1rem 0rem;
+    width: 100%;
+  }
 }

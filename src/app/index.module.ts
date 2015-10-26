@@ -13,6 +13,7 @@
 /// <reference path="../app/components/post/post.service.ts" />
 /// <reference path="../app/components/user/user.service.ts" />
 /// <reference path="../app/components/popup/popup.controller.ts" />
+/// <reference path="../app/components/post/post-popup.controller.ts" />
 
 declare var moment: moment.MomentStatic;
 
@@ -28,6 +29,7 @@ module simplysocial {
     .run(RunBlock)
     .controller('MainController', MainController)
     .controller('PopUpController', PopUpController)
+    .controller('PostPopUpController', PostPopUpController)
     .controller('SettingsController', SettingsController)
 	.service('postService', PostService)
     .service('userService', UserService)

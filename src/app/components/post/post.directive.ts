@@ -25,7 +25,7 @@ module simplysocial {
     public isExpanded: boolean = false;
     public replyMessage: string = "";
 
-    constructor(private moment: moment.MomentStatic, private postService: PostService) {
+    constructor(private moment: moment.MomentStatic, private postService: PostService, private ngDialog) {
       this.data.relativeTime = moment(new Date(this.data.timestamp)).fromNow(true);
 
       if (this.data.replies) {
@@ -49,6 +49,15 @@ module simplysocial {
     public reply() {
       this.postService.createReply(this.replyMessage, this.data);
       this.replyMessage = "";
+    }
+
+    public openImage() {
+      this.ngDialog.open({
+        template: 'app/components/post/post-popup.html',
+        controller: PostPopUpController,
+        controllerAs: 'pp',
+        data: this.data
+      });
     }
   }
 }

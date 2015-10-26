@@ -57,4 +57,5 @@ I chose to use typescript for a number of reasons, first and foremost that angul
 
 ##Known bugs
 * Didn't have time to convert things to svg to handle the icons properly
+* Clicking an image will open a dialog (modal) with the image showing, however, it doesn't show the whole post, or the ability to reply. I didn't have time to finish this feature.
 
