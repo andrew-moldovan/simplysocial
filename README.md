@@ -1,5 +1,9 @@
 # simplysocial
 
+##Seed
+I used the [gulp angular yo generator](https://github.com/Swiip/generator-gulp-angular) to get started. I hadn't used this generator before, so I figured I would give it a try for this project. I found it to be really awesome, giving all the necessary tools right out of the box. 
+I also decided to use typescrip as a test to see how quickly a project can be brought up from the ground and found it very easy. Please see below for a more detailed explanation.
+
 ##Setup
 ##### Install required tools `gulp` and `bower`:
 ```
@@ -33,25 +37,24 @@ karma start
 * Grid layout or list layout
 * Responsive
 * Unit tests for the logic in the app
+* Tested in IE9, Chrome, Firefox
 
-responsivness tested on (chrome device emulator)
+##Responsiveness tested on chrome device emulator
+* iPad
+* iPad Mini
+* iPhone 4
+* iPhone 5
+* iPhone 6
+* iPhone 6 Plus
+* Nexus 4
+* Nexus 5
+* Nexus 6
+* Nexus 7
+* Nokia Lumia 520
 
-iPad
-iPad Mini
-iPhone 4
-iPhone 5
-iPhone 6
-iPhone 6 Plus
-Nexus 4
-Nexus 5
-Nexus 6
-Nexus 7
-Nokia Lumia 520
+##Why typescript
+I chose to use typescript for a number of reasons, first and foremost that angular 2.0 is being written in typescript and looking at a lot of what has come out of the latest ng-conf conferences, a lot of people are using typescript to write their angular apps. The syntax is very similar (it's just a superset of javascript), and offers a few syntatic goodies (types, lambda syntax for functions, etc...) that may be used if it helps.
 
-why typescript
-
-features
-
-known bugs
-didn't have time to convert things to svg to handle the icons properly
+##Known bugs
+* Didn't have time to convert things to svg to handle the icons properly
 
