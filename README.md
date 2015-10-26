@@ -1,8 +1,26 @@
 # simplysocial
 
-setup
+##Setup
+##### Install required tools `gulp` and `bower`:
+```
+npm install -g gulp bower
+```
+##### Clone this repo
+##### Run the `bower` and `npm` installs
+```
+bower install
+npm install
+```
+##### To start the application 
+```
+gulp serve
+```
+##### Then navigate to `localhost:3000`
 
-to run unit tests, karma start
+##### To run unit tests
+```
+karma start
+```
 
 responsivness tested on (chrome device emulator)
 
