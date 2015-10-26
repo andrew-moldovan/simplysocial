@@ -6,7 +6,7 @@
     
   <div class="big-image">
     <img src="assets/images/header-bg.png" class="scrollable-header-image">    
-  	<post-create></post-create>
+  	<post-create new-item="main.newItem"></post-create>
 
     <div class="filters">
       <button ng-click="main.filter = 0" ng-class="{'selected' : main.filter == 0}">ALL POSTS</button>
@@ -14,15 +14,17 @@
       <button ng-click="main.filter = 2" ng-class="{'selected' : main.filter == 2}">VIDEOS</button>
       <span class="options">
         <img src="assets/images/list.png" ng-if="main.showGridOption" ng-click="main.grid = false">
-        <img src="assets/images/grid.png" ng-if="main.showGridOption" ng-click="main.createGrid()">
+        <img src="assets/images/grid.png" ng-if="main.showGridOption" ng-click="main.createGrid(false)">
       </span>
         
     </div>
     
   </div>
-  
+
   <div class="posts" ng-if="!main.grid">
-    <post ng-repeat="post in main.posts.data | filterPosts: main.filter" data="post" grid="false"></post>
+    <div class="animate-post" ng-repeat="post in main.posts.data | filterPosts: main.filter">
+      <post data="post" grid="false"></post>
+    </div>
   </div>
 
   <div class="posts-grid" ng-if="main.grid">

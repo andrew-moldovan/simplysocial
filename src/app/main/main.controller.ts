@@ -26,9 +26,26 @@ module simplysocial {
       });
     }
 
-    public createGrid() {
+    public newItem = () => {
+      // get notified by the post-creater directive of a new item
+      // the new item will be the at the front of the data list
+      if (this.grid) {
+        // recreate the grid
+        this.createGrid(true);
+      }
+    }
+
+    // the override flag overrides the check to see if we've already created the grid and will recreate it
+    public createGrid(override: boolean) {
       // if we haven't already created the arrays
-      if (this.leftColumn.length == 0) {
+      if (this.leftColumn.length == 0 || override) {
+
+        if (override) {
+          this.leftColumn = [];
+          this.middleColumn = [];
+          this.rightColumn = [];
+        }
+
         // let's create 3 different arrays for the 3 different columns
         for (var i = 0; i < this.posts.data.length; i++) {
           if (i % 3 == 0) {

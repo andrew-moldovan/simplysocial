@@ -6,7 +6,9 @@ module simplysocial {
 
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+        newItem: '&'
+      },
       templateUrl: 'app/components/post/post.create.html',
       controller: PostCreateController,
       controllerAs: 'pc',
@@ -19,6 +21,7 @@ module simplysocial {
   class PostCreateController {
     public message: string;
     public error: boolean;
+    public newItem: Function;
 
     constructor(private postService: PostService) {}
 
@@ -29,6 +32,9 @@ module simplysocial {
       }
       this.error = false;
       this.message = "";
+
+      // notify the parent directive of the created post
+      this.newItem()();
     }
 
     public handleKeyDown($event) {
