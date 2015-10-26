@@ -79,7 +79,7 @@ $margin-down: .6rem;
       }
     }
 
-    .flexbox .pic-and-dropdown {
+    .pic-and-dropdown {
       width: 4rem;
       height: 3rem;
     }
@@ -128,5 +128,7 @@ $margin-down: .6rem;
 }
 
 .no-flexbox .pic-and-dropdown {
-  display: inline;
+  display: inline-block;
+  width: 4rem;
+  height: 3rem;
 }
