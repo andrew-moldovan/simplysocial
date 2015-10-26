@@ -208,5 +208,25 @@
     opacity: .7;
     width: $post-width;
   }
-    
+}
+
+.no-flexbox .top-items {
+  display: inline;
+}
+
+.no-flexbox .data {
+  display: inline-block;
+  width: 90%;
+}
+
+.no-flexbox .profile-pic {
+  margin: 0 0.4rem 0 0.2rem;
+}
+
+.no-flexbox .pull-right-bottom-items {
+  display: inline;
+}
+
+.no-flexbox .timestamp {
+  display: inline-block;
 }
