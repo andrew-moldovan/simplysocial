@@ -53,9 +53,9 @@ karma start
 * Nokia Lumia 520
 
 ##Why typescript
-I chose to use typescript for a number of reasons, first and foremost that angular 2.0 is being written in typescript and looking at a lot of what has come out of the latest ng-conf conferences, a lot of people are using typescript to write their angular apps. The syntax is very similar (it's just a superset of javascript), and offers a few syntatic goodies (types, lambda syntax for functions, etc...) that may be used if it helps.
+I chose to use typescript for a number of reasons, first and foremost that angular 2.0 is being written in typescript and looking at a lot of what has come out of the latest ng-conf conferences, a lot of people are using typescript to write their angular apps to ease migration. The syntax is very similar (it's just a superset of javascript), and offers a few syntactic goodies (types, lambda syntax for functions, etc...) that may be used if it helps.
 
 ##Known bugs
-* Didn't have time to convert things to svg to handle the icons properly
+* Didn't have time to convert icons to svg to handle them properly
 * Clicking an image will open a dialog (modal) with the image showing, however, it doesn't show the whole post, or the ability to reply. I didn't have time to finish this feature.
 * IE 9 support focused on functionality as opposed to pixel perfect rendition. There are some extra tweaks that can be done to make it look perfect.
