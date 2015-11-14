@@ -1,6 +1,6 @@
-# simplysocial -- No Bootstrap Demo Project
+# simplysocial -- Bootstrap-Free Demo Project
 
-I wanted to play wtih building a fully responsive front-end without using Bootstrap and to see how difficult it would be. This is just a simple demo project of me doing just that.
+I wanted to play with building a fully responsive front-end without using Bootstrap and to see how difficult it would be.
 
 ##Seed
 I used the [gulp angular yo generator](https://github.com/Swiip/generator-gulp-angular) to get started. I hadn't used this generator before, so I figured I would give it a try for this project. I found it to be really awesome, giving all the necessary tools right out of the box. 
