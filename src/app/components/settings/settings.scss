@@ -12,12 +12,15 @@
 
   .account {
     border-bottom: .1rem solid $general-links;
-    display: inline-flex;
+    display: inline;
     padding-bottom: 3rem;
     width: 100%;
 
+    .left-account {
+      float: left;
+    }
+
     .right-account {
-      width: 100%;
       margin-top: 2rem;
       
       input {
@@ -46,10 +49,11 @@
     }
 
     .switch-and-text {
-      display: inline-flex;
+      display: inline;
     }
 
     .switch-text {
+      display: inline-block;
       margin: .5rem 0 0 1rem;
     }
 

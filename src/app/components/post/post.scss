@@ -1,11 +1,3 @@
-// .animate-post.ng-enter {
-//   transition: 1s;
-//   opacity: 0;
-// }
-// .animate-post.ng-enter-active {
-//   opacity: 1;
-// }
-
 .posts {
   margin: 2rem auto 0 auto;
   width: $post-width;
@@ -35,12 +27,8 @@
     overflow: hidden;
     width: 80%;
 
-    .expand-collapse {
-      margin-left: 3.5rem;
-    }
-
     .data {
-      max-width: 90%;
+      width: 75%;
     }
 
     .post-image {
@@ -48,16 +36,12 @@
     }
 
     .profile-pic {
-      margin-left: 0rem;
-    }
-
-    .top-items {
-      width: 100%;
+      margin: 0 0.4rem 0 0.2rem;
     }
   }
 }
 
-.post, .post-grid{
+.post, .post-grid {
   border: .1rem solid $general-links;
   border-radius: .2rem;
   color: $post-font-gray;
@@ -79,11 +63,19 @@
     margin: 1rem 0 .5rem 0;
   }
 
+  .data {
+    display: inline-block;
+    left: 1.1rem;
+    max-width: 90%;
+    position: relative;
+    width: 90%;
+  }
+
   .displayName {
     color: $post-display-name;
     font-weight: 700;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
 
   .expand-collapse {
@@ -92,7 +84,7 @@
     color: $general-links;
     cursor: pointer;
     font-size: .8rem;
-    margin-left: 4.5rem;
+    margin-left: 4.2rem;
     padding: 0;
 
     &:focus {
@@ -115,14 +107,15 @@
 
   .pull-right-bottom-items {
     color: $general-links;
-    display: inline-flex;
+    display: inline;
     float: right;
   }
 
   .profile-pic {
     border-radius: .2rem;
+    float: left;
     height: 2.5rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.4rem 0 0.2rem;
     min-width: 2.5rem;
   }
 
@@ -168,9 +161,6 @@
     padding-top: 1rem;
   }
 
-  .top-items {
-    display: inline-flex;
-  }
 } 
 
 .home-create {
@@ -219,24 +209,7 @@
   }
 }
 
-.no-flexbox .top-items {
-  display: inline;
-}
-
-.no-flexbox .data {
-  display: inline-block;
-  width: 90%;
-}
-
-.no-flexbox .profile-pic {
-  margin: 0 0.4rem 0 0.2rem;
-}
-
-.no-flexbox .pull-right-bottom-items {
-  display: inline;
-}
-
-.no-flexbox .timestamp {
+.timestamp {
   display: inline-block;
 }
 

@@ -5,7 +5,6 @@
 .popup {
 
   .bottom-items {
-    display: inline-flex;
     height: 1.3rem;
     width: 100%;
   }
@@ -13,6 +12,7 @@
   button {
     position: absolute;
     right: 1rem;
+    top: 8rem;
   }
 
   .error {

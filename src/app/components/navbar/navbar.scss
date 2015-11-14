@@ -13,7 +13,7 @@ $margin-down: .6rem;
 
   a {
     color: $general-links;
-    display: inline-flex;
+    display: inline-block;
     text-decoration: none;
   }
   
@@ -24,6 +24,8 @@ $margin-down: .6rem;
     .title {
       color: $general-links;
       font-size: 1.3rem;
+      position: relative;
+      top: -.3rem;
 
       .dark {
         color: $dark-gray-for-settings;
@@ -41,12 +43,15 @@ $margin-down: .6rem;
     }
   }
 
-  .logo-pic {//81D1BD B3B6BD
+  .logo-pic {
     height: 1.6rem;
+    position: relative;
+    top: .5rem;
     width: auto;
   }
 
   .right-side {
+    display: inline;
     float: right;
     margin: $margin-down - .1rem 3rem $margin-down - .1rem $margin-down - .1rem;
 
@@ -80,6 +85,7 @@ $margin-down: .6rem;
     }
 
     .pic-and-dropdown {
+      display: inline-block;
       width: 4rem;
       height: 3rem;
     }
@@ -104,7 +110,9 @@ $margin-down: .6rem;
       color: $general-links;
       height: 1.7rem;
       padding: 0 1.5rem 0 .5rem;
+      position: relative;
       margin-right: 1rem;
+      top: -.6rem;
       width: 10.5rem;
 
       &:focus {
@@ -115,20 +123,5 @@ $margin-down: .6rem;
         display: none; // hide when small enough screen
       }
     }
-  }
-  
-}
-
-.no-flexbox .right-side {
-  display: inline;
-}
-
-.flexbox .right-side {
-  display: inline-flex;
-}
-
-.no-flexbox .pic-and-dropdown {
-  display: inline-block;
-  width: 4rem;
-  height: 3rem;
+  }  
 }
